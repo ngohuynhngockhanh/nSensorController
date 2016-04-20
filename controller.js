@@ -12,7 +12,7 @@ port.on('data', function (data) {
 	var array = data.split(" ");
 	switch (array[0]) {
 		case "SENSOR":
-			var temp = phpjs.intval(data[2]) + phpjs.intval(data[3]) / 100;
+			var temp = phpjs.intval(array[3]) + (phpjs.intval(array[4]) / 100);
 			console.log(temp);
 			break;
 	}
